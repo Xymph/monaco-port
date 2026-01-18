@@ -15,7 +15,7 @@ This codebase will usually remain up-to-date against MediaWiki, and will drop
 support for older versions unconditionally once it becomes impractical to
 continue to support them.
 
-New features in this fork over `dantman/monaco-port` include:  
+New features in this fork over `dantman/monaco-port` include:
 
 * A new Widgets framework which cooperates with [Extension:Gadgets](https://www.mediawiki.org/wiki/Extension:Gadgets) to allow sidebar content to be defined through the MediaWiki frontend.
 * Special support for [Extension:FlaggedRevs](https://www.mediawiki.org/wiki/Extension:FlaggedRevs) and [Extension:MobileFrontend](https://www.mediawiki.org/wiki/Extension:MobileFrontend) when they are installed.
@@ -45,16 +45,16 @@ near the end of your LocalSettings.php to finish installation of the skin.
 
 You can also include the ExtendedBodyAttributes.php code if you wish to
 re-introduce the mainpage and loggedout classes that were in Wikia's version of
-Monaco, doing this will actually make these css classes available globally to
+Monaco, doing this will actually make these CSS classes available globally to
 all skins that are programmed using the MediaWiki 1.16 headElement code.
 
 Additionally you can install the ContentRightSidebar extension using:
 
-`require_once("$IP/skins/monaco/ContentRightSiebar.php");`
+`require_once("$IP/skins/monaco/ContentRightSidebar.php");`
 
 Doing so will provide you with a `<right-sidebar>...</right-sidebar>` tag which 
 will create right floated content in the page that will be moved into the right
-sidebar in monaco based skins. You can also use it with the args 
+sidebar in monaco based skins. You can also use it with the args:
 
 `<right-sidebar with-box="true" title="My Title">...</right-sidebar>`
 
