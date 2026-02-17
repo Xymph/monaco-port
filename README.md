@@ -10,7 +10,7 @@ also previously deployed at the Orain non-profit wiki farm before it went
 offline.
 
 Compared to the original version of the skin, this fork now supports MediaWiki
-versions 1.24 to 1.29 officially, with verified support for 1.30+ in the works.
+versions 1.27 to 1.30 officially, with verified support for 1.31+ in the works.
 This codebase will usually remain up-to-date against MediaWiki, and will drop
 support for older versions unconditionally once it becomes impractical to
 continue to support them.
@@ -39,7 +39,7 @@ your MediaWiki installation and running:
 
 After you have placed the skin into that folder add:
 
-`require_once("$IP/skins/monaco/monaco.php");`
+`wfLoadSkin('monaco');`
 
 near the end of your LocalSettings.php to finish installation of the skin.
 
