@@ -63,6 +63,26 @@ the `with-box` attribute when this extension is used with MediaWiki 1.25 or
 later. For consistency, it is suggested that you provide this value anyway,
 since it also works with earlier versions of MediaWiki.
 
+Configuration
+-------------
+
+The following configuration settings can be used in LocalSettings.php,
+shown with their default values:
+
+```
+$wgMonacoAllowUsetheme = false;         // Set to false to disable &usetheme= support
+$wgMonacoTheme = "sapphire";            // Load a pre-made Monaco theme from the styles folder
+$wgMonacoDynamicCreateOverride = false; // Override "Special:CreatePage" urls with something else
+$wgMonacoUseMoreButton = true;          // Set to false to disable the more button and just list out links
+$wgMonacoUseSitenoticeIsland = false;   // Use an island above the content area for the sitenotice instead of embedding it above the page title
+$wgMonacoUseMasthead = true;            // Show the masthead on userpages
+$wgMonacoCompactSpecialPages = false;   // Compact the tab_bar on special pages
+$wgMonacoEnablePaypal = false;          // Enable a Paypal button
+$wgMonacoPaypalID = "";                 // Set to Paypal ID if button is enabled
+$wgMonacoEnablePatreon = false;         // Enable a Patreon button
+$wgMonacoPatreonURL = "";               // Set to Patreon URL if button is enabled
+```
+
 License
 -------
 All of the code released by Wikia was made available under GPL v2.0 or later.
