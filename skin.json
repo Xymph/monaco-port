@@ -99,7 +99,7 @@
 		"remoteSkinPath": "monaco"
 	},
 	"config": {
-		"MonacoAllowusetheme": true,
+		"MonacoAllowUseTheme": true,
 		"MonacoTheme" : "sapphire",
 		"MonacoDynamicCreateOverride" : false,
 		"MonacoUseMoreButton" : true,

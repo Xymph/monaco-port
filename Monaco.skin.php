@@ -42,7 +42,7 @@ class SkinMonaco extends SkinTemplate {
 	public $template = 'MonacoTemplate';
 
 	public function __construct() {
-		$this->monacoConfig = \MediaWiki\MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'monaco' );
+		$this->monacoConfig = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'monaco' );
 	}
 
 	/**
@@ -79,7 +79,7 @@ class SkinMonaco extends SkinTemplate {
 	 * @param $out OutputPage
 	 */
 	function setupSkinUserCss( OutputPage $out ) {
-		global $wgMonacoTheme, $wgMonacoAllowUsetheme, $wgRequest, $wgResourceModules;
+		global $wgRequest, $wgResourceModules;
 
 		parent::setupSkinUserCss( $out );
 
@@ -98,7 +98,7 @@ class SkinMonaco extends SkinTemplate {
 		}
 
 		$theme = $this->monacoConfig->get( 'MonacoTheme' );
-		if ( $this->monacoConfig->get( 'MonacoAllowusetheme' ) ) {
+		if ( $this->monacoConfig->get( 'MonacoAllowUseTheme' ) ) {
 			$theme = $wgRequest->getText('usetheme', $theme);
 			if ( preg_match('/[^a-z]/', $theme) ) {
 				$theme = $this->monacoConfig->get( 'MonacoTheme' );
@@ -952,7 +952,7 @@ if ($custom_article_footer !== '') {
 <?php $this->printRightSidebar() ?>
 		<!-- WIDGETS -->
 		<div id="widget_sidebar" class="reset widget_sidebar left_sidebar sidebar">
-			<div id="wiki_logo" style="background-image: url(<?php $this->html( 'logopath' ) ?>);"><a href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>" accesskey="z" rel="home"><?php echo $wgSitename ?></a></div>
+			<div id="wiki_logo" style="background-image: url(<?php $this->html( 'logopath' ) ?>);"><a href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href']) ?>" accesskey="z" rel="home"><?php echo $wgSitename ?></a></div>
 
 			<!-- SEARCH/NAVIGATION -->
 			<div class="widget sidebox navigation_box" id="navigation_widget" role="navigation">
@@ -1324,7 +1324,7 @@ $this->html('reporttime');
 
 		if ( trim($branding) ) { ?>
 			<div id="monacoBranding">
-<?php echo $branding; ?>
+<?php echo $branding ?>
 			</div>
 <?php
 		}
@@ -1432,11 +1432,11 @@ $this->html('reporttime');
 		?>
 			<div id="user_masthead" class="accent reset clearfix">
 				<div id="user_masthead_head" class="clearfix">
-					<h2><?php echo htmlspecialchars($username); ?>
+					<h2><?php echo htmlspecialchars($username) ?>
 <?php if ( $user->isAnon() ) { ?>
 						<small id="user_masthead_anon"><?php echo $user->getName(); ?></small>
 <?php } else { ?>
-						<div id="user_masthead_scorecard" class="dark_text_1"><?php echo htmlspecialchars($editcount); ?></div>
+						<div id="user_masthead_scorecard" class="dark_text_1"><?php echo htmlspecialchars($editcount) ?></div>
 <?php } ?>
 					</h2>
 				</div>
