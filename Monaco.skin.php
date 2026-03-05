@@ -98,7 +98,7 @@ class SkinMonaco extends SkinTemplate {
 		}
 
 		$theme = $this->monacoConfig->get( 'MonacoTheme' );
-		if ( $this->monacoConfig->get( 'MonacoAllowUseTheme' ) ) {
+		if ( $this->monacoConfig->get( 'MonacoAllowUsetheme' ) ) {
 			$theme = $wgRequest->getText('usetheme', $theme);
 			if ( preg_match('/[^a-z]/', $theme) ) {
 				$theme = $this->monacoConfig->get( 'MonacoTheme' );
